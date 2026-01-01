@@ -1,0 +1,49 @@
+:root {
+    /* Primary */
+    --color-bg-main: #FFFFFF;
+    --color-bg-secondary: #F9F9F9;
+
+    /* Secondary (Golden Green & Gold) */
+    --color-gold: #6D7F48;
+    /* Golden Green */
+    --color-gold-muted: #D4B675;
+    /* Soft Gold */
+    /* Darker gold/green for borders/subtle elements */
+
+    /* Support */
+    --color-surface: #FFFFFF;
+    --color-surface-hover: #F2F2F2;
+    --color-border: #E0E0E0;
+
+    /* Text */
+    --color-text-main: #121212;
+    --color-text-muted: #555555;
+
+    /* Functional */
+    --color-success: #2E8B57;
+    /* Muted Emerald */
+    --color-error: #8B0000;
+
+    /* Typography */
+    --font-heading: 'Inter',
+        'Helvetica Neue',
+        sans-serif;
+    --font-mono: 'Space Mono',
+        monospace;
+    /* For technical specs */
+    --font-body: 'Inter',
+        sans-serif;
+
+    /* Spacing */
+    --container-width: 1400px;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 12px;
+    --spacing-lg: 24px;
+    --spacing-xl: 48px;
+    --spacing-xxl: 96px;
+
+    /* Layout Standard */
+    --section-padding: 64px;
+    /* balanced spacing */
+}
