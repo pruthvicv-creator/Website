@@ -317,23 +317,144 @@ html {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .hero-heading {
-        font-size: 2.5rem;
-    }
 
-    .stacked-text p {
-        font-size: 1.8rem;
-    }
-
-    .main-statement {
+    /* Typography */
+    h1 {
         font-size: 2rem;
     }
 
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    /* Banners */
+    .banner {
+        padding: var(--spacing-lg) 0 var(--spacing-md);
+    }
+
+    .small-banner h1 {
+        font-size: 1.75rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    /* Service Details */
+    .service-detail-block {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        padding: var(--spacing-lg) 0;
+    }
+
+    .service-visual {
+        height: 250px;
+    }
+
+    /* Equipment Grid */
+    .equipment-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    /* Pipeline Visual */
+    .pipeline-visual {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    .pipeline-arrow {
+        transform: rotate(90deg);
+        font-size: 1.5rem;
+    }
+
+    .step-num {
+        font-size: 2rem;
+    }
+
+    /* Contact Form */
+    .contact-layout {
+        padding: 0;
+    }
+
+    .contact-form-wrapper {
+        max-width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: var(--spacing-md);
+    }
+
+    /* Scroll Frames */
+    .scroll-frame {
+        padding: 80px var(--spacing-md);
+        min-height: 80vh;
+    }
+
+    .frame-content {
+        max-width: 100%;
+    }
+
+    .hero-heading {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtext {
+        font-size: 1rem;
+    }
+
+    .stacked-text p {
+        font-size: 1.5rem;
+    }
+
+    .main-statement {
+        font-size: 1.75rem;
+    }
+
     .belief-list .belief-item {
+        font-size: 1.25rem;
+    }
+
+    .cta-heading {
+        font-size: 1.75rem;
+    }
+
+    .supporting-lines {
+        padding-left: var(--spacing-md);
+    }
+
+    .supporting-lines p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-heading {
+        font-size: 1.5rem;
+    }
+
+    .small-banner h1 {
+        font-size: 1.5rem;
+    }
+
+    .main-statement {
         font-size: 1.5rem;
     }
 
     .cta-heading {
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .stacked-text p {
+        font-size: 1.25rem;
+    }
+
+    .scroll-frame {
+        padding: 60px var(--spacing-sm);
     }
 }
