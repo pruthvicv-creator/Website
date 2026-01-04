@@ -4,6 +4,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Register GSAP ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
+    // Burger Menu Logic
+    const burger = document.querySelector('.burger-menu');
+    const nav = document.querySelector('.nav-list');
+
+    if (burger && nav) {
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burger.classList.toggle('active');
+            document.body.classList.toggle('no-scroll'); // Optional: prevent body scroll
+        });
+
+        // Close menu when clicking a link
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                burger.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            });
+        });
+    }
+
     // 1. Initial Hero Animation (On Load)
     const heroTimeline = gsap.timeline();
     heroTimeline

@@ -21,6 +21,10 @@ body {
     overflow-x: hidden;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 a {
     text-decoration: none;
     color: inherit;

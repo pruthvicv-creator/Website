@@ -20,6 +20,12 @@
 .logo {
     display: flex;
     align-items: center;
+    z-index: 1002;
+    /* Ensure logo is above drawer/overlay if needed */
+}
+
+.burger-menu {
+    display: none;
 }
 
 .logo img {
@@ -162,23 +168,69 @@ main {
     }
 
     .header-inner {
-        flex-direction: column;
-        gap: var(--spacing-sm);
+        flex-direction: row;
+        /* Keep row for logo and burger */
+        justify-content: space-between;
+        gap: 0;
     }
 
-    .logo img {
-        height: 40px;
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1002;
     }
 
-    .nav-list {
-        flex-direction: column;
-        gap: var(--spacing-sm);
+    .burger-menu span {
         width: 100%;
-        text-align: center;
+        height: 3px;
+        background: var(--color-text-main);
+        transition: all 0.3s linear;
+        border-radius: 1px;
+    }
+
+    /* Burger Animation */
+    .burger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+    /* Side Menu Drawer */
+    .nav-list {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: var(--color-bg-main);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease-in-out;
+        z-index: 1001;
+        padding: 2rem;
+    }
+
+    .nav-list.active {
+        right: 0;
     }
 
     .nav-list a {
-        font-size: 0.85rem;
+        font-size: 1.2rem;
+        margin: 1.5rem 0;
     }
 
     /* Main content offset */
