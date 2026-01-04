@@ -156,7 +156,8 @@ main {
 
     /* Header */
     .site-header {
-        position: relative;
+        position: sticky;
+        top: 0;
         padding: 12px 0;
     }
 

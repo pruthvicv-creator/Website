@@ -238,7 +238,12 @@
    Given layout.css sets main padding, let's just make frames full screen logic. */
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+}
+
+@media (min-width: 769px) {
+    html {
+        scroll-snap-type: y mandatory;
+    }
 }
 
 /* Home Page Specific Layout Overrides */
@@ -253,11 +258,15 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
     position: relative;
     padding: 100px var(--spacing-md);
-    /* Account for fixed header visually */
+}
+
+@media (min-width: 769px) {
+    .scroll-frame {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
 }
 
 .frame-content {
