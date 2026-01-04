@@ -153,9 +153,11 @@ main {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+
     /* Header */
     .site-header {
-        padding: 6px 0;
+        position: relative;
+        padding: 12px 0;
     }
 
     .header-inner {
@@ -180,7 +182,7 @@ main {
 
     /* Main content offset */
     main {
-        padding-top: 120px;
+        padding-top: 0;
     }
 
     /* Hero */
