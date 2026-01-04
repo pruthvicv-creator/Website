@@ -28,9 +28,34 @@
     border-bottom: 1px solid var(--color-surface);
 }
 
+.card-image {
+    width: 100%;
+    height: 200px;
+    /* or whatever height works best */
+    margin-bottom: var(--spacing-md);
+    overflow: hidden;
+    border-radius: 4px;
+    background: #f0f0f0;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
 /* Standard Page Sections (About, Capabilities) */
-.about-content,
-.capabilities-section,
+.about-content {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--spacing-lg);
+    /* Reduced padding */
+}
+
 .contact-section {
     padding: var(--section-padding) 0;
 }

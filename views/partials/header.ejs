@@ -4,6 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="<%= locals.description ? description : 'Laminar Circuits - Reliable PCB Validation & Testing Services' %>">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.laminarcircuits.com<%= page === 'home' ? '' : '/' + page %>">
+    <meta property="og:title" content="<%= title %> | Laminar Circuits">
+    <meta property="og:description"
+        content="<%= locals.description ? description : 'Reliable PCB Validation & Testing Services' %>">
+    <meta property="og:image" content="https://www.laminarcircuits.com/images/laminar_logo_hq.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.laminarcircuits.com<%= page === 'home' ? '' : '/' + page %>">
+    <meta property="twitter:title" content="<%= title %> | Laminar Circuits">
+    <meta property="twitter:description"
+        content="<%= locals.description ? description : 'Reliable PCB Validation & Testing Services' %>">
+    <meta property="twitter:image" content="https://www.laminarcircuits.com/images/laminar_logo_hq.jpg">
+
     <title>
         <%= title %> | Laminar Circuits
     </title>
@@ -28,9 +47,6 @@
             <nav>
                 <ul class="nav-list">
                     <li><a href="/services" class="<%= page === 'services' ? 'active' : '' %>">Services</a></li>
-                    <li><a href="/capabilities" class="<%= page === 'capabilities' ? 'active' : '' %>">Capabilities</a>
-                    </li>
-
                     <li><a href="/about" class="<%= page === 'about' ? 'active' : '' %>">About</a></li>
                     <li><a href="/contact" class="btn btn-sm">Contact</a></li>
                 </ul>

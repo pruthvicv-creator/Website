@@ -13,25 +13,37 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 // We will move these to separate controllers later if huge, but for now inline is fine for speed
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Home', page: 'home' });
+    res.render('index', {
+        title: 'Home',
+        page: 'home',
+        description: 'Laminar Circuits provides consistent, early-stage PCB validation and production testing services including continuity, power-on, and functional testing.'
+    });
 });
 
 app.get('/services', (req, res) => {
-    res.render('services', { title: 'Services', page: 'services' });
-});
-
-app.get('/capabilities', (req, res) => {
-    res.render('capabilities', { title: 'Capabilities', page: 'capabilities' });
+    res.render('services', {
+        title: 'Services',
+        page: 'services',
+        description: 'Explore our PCB testing services: Continuity & Shorts Testing, Controlled Power-On Testing, and comprehensive Functional Testing for zero-defect assurance.'
+    });
 });
 
 
 
 app.get('/about', (req, res) => {
-    res.render('about', { title: 'About Us', page: 'about' });
+    res.render('about', {
+        title: 'About Us',
+        page: 'about',
+        description: 'Learn about Laminar Circuits\' mission to build reliable validation processes for hardware teams, ensuring products perform in the real world.'
+    });
 });
 
 app.get('/contact', (req, res) => {
-    res.render('contact', { title: 'Contact', page: 'contact' });
+    res.render('contact', {
+        title: 'Contact',
+        page: 'contact',
+        description: 'Get in touch with Laminar Circuits to discuss your PCB testing and validation requirements. Let\'s build reliable hardware together.'
+    });
 });
 
 // Middleware for parsing form data
