@@ -167,9 +167,17 @@ main {
         padding: 12px 0;
     }
 
+    /* Reduce header container padding to push items to edges */
+    .header-inner.container {
+        padding-left: var(--spacing-sm);
+        padding-right: 5px;
+        /* Minimal padding for edge alignment */
+        width: 100%;
+        max-width: 100%;
+    }
+
     .header-inner {
         flex-direction: row;
-        /* Keep row for logo and burger */
         justify-content: space-between;
         gap: 0;
     }
