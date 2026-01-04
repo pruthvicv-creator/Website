@@ -170,7 +170,7 @@ main {
     /* Reduce header container padding to push items to edges */
     .header-inner.container {
         padding-left: var(--spacing-sm);
-        padding-right: 5px;
+        padding-right: 0;
         /* Minimal padding for edge alignment */
         width: 100%;
         max-width: 100%;
